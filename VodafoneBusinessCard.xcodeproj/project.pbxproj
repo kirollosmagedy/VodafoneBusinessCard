@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4804FA6921B91C320060EEF2 /* particle.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 4804FA6721B91C310060EEF2 /* particle.scnp */; };
+		4804FA6A21B91C320060EEF2 /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 4804FA6821B91C320060EEF2 /* cross.png */; };
 		480B788721B875C5000203A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480B788621B875C5000203A2 /* AppDelegate.swift */; };
 		480B788921B875C5000203A2 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 480B788821B875C5000203A2 /* art.scnassets */; };
 		480B788B21B875C5000203A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480B788A21B875C5000203A2 /* ViewController.swift */; };
 		480B788E21B875C5000203A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 480B788C21B875C5000203A2 /* Main.storyboard */; };
 		480B789021B875C6000203A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 480B788F21B875C6000203A2 /* Assets.xcassets */; };
 		480B789321B875C6000203A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 480B789121B875C6000203A2 /* LaunchScreen.storyboard */; };
+		480B789B21B87C21000203A2 /* BusinessCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480B789A21B87C21000203A2 /* BusinessCard.swift */; };
+		480B789F21B87E9D000203A2 /* ViewController+Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480B789E21B87E9D000203A2 /* ViewController+Session.swift */; };
+		480B78A121B88056000203A2 /* BusinessCardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480B78A021B88056000203A2 /* BusinessCardNode.swift */; };
+		482833FC21BD252D0031F383 /* ViewController + Interactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482833FB21BD252D0031F383 /* ViewController + Interactions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4804FA6721B91C310060EEF2 /* particle.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = particle.scnp; sourceTree = "<group>"; };
+		4804FA6821B91C320060EEF2 /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
 		480B788321B875C5000203A2 /* VodafoneBusinessCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VodafoneBusinessCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		480B788621B875C5000203A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		480B788821B875C5000203A2 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -24,6 +32,11 @@
 		480B788F21B875C6000203A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		480B789221B875C6000203A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		480B789421B875C6000203A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		480B789A21B87C21000203A2 /* BusinessCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCard.swift; sourceTree = "<group>"; };
+		480B789E21B87E9D000203A2 /* ViewController+Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Session.swift"; sourceTree = "<group>"; };
+		480B78A021B88056000203A2 /* BusinessCardNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCardNode.swift; sourceTree = "<group>"; };
+		482833FB21BD252D0031F383 /* ViewController + Interactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + Interactions.swift"; sourceTree = "<group>"; };
+		482833FD21BD44140031F383 /* vodafone.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = vodafone.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +50,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4804FA6621B91C290060EEF2 /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				4804FA6821B91C320060EEF2 /* cross.png */,
+				4804FA6721B91C310060EEF2 /* particle.scnp */,
+			);
+			path = Particles;
+			sourceTree = "<group>";
+		};
 		480B787A21B875C5000203A2 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +78,37 @@
 		480B788521B875C5000203A2 /* VodafoneBusinessCard */ = {
 			isa = PBXGroup;
 			children = (
+				4804FA6621B91C290060EEF2 /* Particles */,
 				480B788621B875C5000203A2 /* AppDelegate.swift */,
 				480B788821B875C5000203A2 /* art.scnassets */,
-				480B788A21B875C5000203A2 /* ViewController.swift */,
 				480B788C21B875C5000203A2 /* Main.storyboard */,
 				480B788F21B875C6000203A2 /* Assets.xcassets */,
+				482833FD21BD44140031F383 /* vodafone.mp4 */,
 				480B789121B875C6000203A2 /* LaunchScreen.storyboard */,
 				480B789421B875C6000203A2 /* Info.plist */,
+				480B789D21B87E6E000203A2 /* ViewController */,
+				480B789C21B87C2C000203A2 /* Models */,
 			);
 			path = VodafoneBusinessCard;
+			sourceTree = "<group>";
+		};
+		480B789C21B87C2C000203A2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				480B789A21B87C21000203A2 /* BusinessCard.swift */,
+				480B78A021B88056000203A2 /* BusinessCardNode.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		480B789D21B87E6E000203A2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				480B788A21B875C5000203A2 /* ViewController.swift */,
+				480B789E21B87E9D000203A2 /* ViewController+Session.swift */,
+				482833FB21BD252D0031F383 /* ViewController + Interactions.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,10 +169,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4804FA6A21B91C320060EEF2 /* cross.png in Resources */,
 				480B788921B875C5000203A2 /* art.scnassets in Resources */,
 				480B789321B875C6000203A2 /* LaunchScreen.storyboard in Resources */,
 				480B789021B875C6000203A2 /* Assets.xcassets in Resources */,
 				480B788E21B875C5000203A2 /* Main.storyboard in Resources */,
+				4804FA6921B91C320060EEF2 /* particle.scnp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +185,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				480B78A121B88056000203A2 /* BusinessCardNode.swift in Sources */,
+				480B789B21B87C21000203A2 /* BusinessCard.swift in Sources */,
+				480B789F21B87E9D000203A2 /* ViewController+Session.swift in Sources */,
 				480B788B21B875C5000203A2 /* ViewController.swift in Sources */,
 				480B788721B875C5000203A2 /* AppDelegate.swift in Sources */,
+				482833FC21BD252D0031F383 /* ViewController + Interactions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +337,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q6ZBACQ976;
 				INFOPLIST_FILE = VodafoneBusinessCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -304,6 +355,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q6ZBACQ976;
 				INFOPLIST_FILE = VodafoneBusinessCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

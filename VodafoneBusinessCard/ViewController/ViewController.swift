@@ -12,52 +12,57 @@ import ARKit
 
 class ViewController: UIViewController {
 
+    
+    //MARK:- Outlets
     @IBOutlet var sceneView: ARSCNView!
     
+    
+    //MARK:- Variables
+    var targetAnchor: ARImageAnchor?
+    var businessCardPlaced = false
+    var businessCardNode: BusinessCardNode!
+    var menuShown = false
+
+    //MARK:- Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Set the view's delegate
         sceneView.delegate = self
-        
-        // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
-        
-        // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        
-        // Set the scene to the view
-        sceneView.scene = scene
+        if let businessCardScene = SCNScene(named: "art.scnassets/card.scn")  {
+            sceneView.scene = businessCardScene
+
+        }
+        sceneView.session.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
-
-        // Run the view's session
+        let configuration = ARImageTrackingConfiguration()
+        configuration.trackingImages = ARReferenceImage.referenceImages(inGroupNamed: "cards", bundle: Bundle.main)!
+        configuration.maximumNumberOfTrackedImages = 1
         sceneView.session.run(configuration)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        // Pause the view's session
         sceneView.session.pause()
     }
 
     // MARK: - ARSCNViewDelegate
-    
-/*
-    // Override to create and configure nodes for anchors added to the view's session.
-    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        let node = SCNNode()
-     
-        return node
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        guard let imageAnchor = anchor as? ARImageAnchor else { return }
+        if !businessCardPlaced {
+            businessCardNode = BusinessCardNode(for:node)
+            businessCardPlaced = true
+            node.addChildNode(businessCardNode)
+            businessCardNode.animateBusinessCard()
+
+        }
+        targetAnchor = imageAnchor
+        
+        
     }
-*/
-    
   
 }
 
